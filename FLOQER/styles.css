@@ -1,0 +1,94 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    --color: #E1E1E1;
+    background-color: #F3F3F3;
+    background-image: 
+        linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+    background-size: 55px 55px;
+    margin: 20px;
+}
+
+#mainTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.chart-container {
+    margin-top: 20px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 100px;
+    text-align: center;
+    background-image: url('images/img.jpg');
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 25px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+div {
+    animation-name: slideInLeft;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#mainTable, #detailTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#mainTable thead, #detailTable thead {
+    background-color: rgb(197, 120, 193);
+    color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+#csvFileInput {
+    margin-top: 20px;
+}
+
+canvas {
+    margin-top: 40px;
+    max-width: 100%;
+}
